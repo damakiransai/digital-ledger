@@ -13,7 +13,7 @@ import com.ledger.entity.Business;
 import com.ledger.service.BusinessService;
 
 @RestController
-@RequestMapping("/api/business")
+@RequestMapping("/api/businesses")
 public class BusinessController {
 	
 	private final BusinessService businessService;
