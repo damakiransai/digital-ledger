@@ -3,6 +3,7 @@ package com.ledger.entity;
 import java.math.BigDecimal;
 import java.time.Instant;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ledger.enums.EntryType;
 
 import jakarta.persistence.Column;
@@ -29,6 +30,7 @@ public class LedgerEntry {
 	
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "customer_id", nullable = false)
+	@JsonIgnore
 	private Customer customer;
 	
 	@Enumerated(EnumType.STRING)
